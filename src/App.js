@@ -4,30 +4,28 @@ import { Route,Routes} from 'react-router-dom';
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
 
 function App() {
-  useEffect(() => {
-    let lastScrollTop = 0;
-    const navbar = document.querySelector(".navbar");
+  // useEffect(() => {
+  //   let lastScrollTop = 0;
+  //   const navbar = document.querySelector(".navbar");
 
-    const handleScroll = () => {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        navbar.classList.add("sticky-navbar-hidden");
-        navbar.classList.remove("sticky-navbar-visible");
-      } else {
-        // Scrolling up
-        navbar.classList.add("sticky-navbar-visible");
-        navbar.classList.remove("sticky-navbar-hidden");
-      }
-      lastScrollTop = scrollTop;
-    };
+  //   const handleScroll = () => {
+  //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //     if (scrollTop > lastScrollTop) {
+  //       navbar.classList.add("sticky-navbar-hidden");
+  //       navbar.classList.remove("sticky-navbar-visible");
+  //     } else {
+  //       navbar.classList.add("sticky-navbar-visible");
+  //       navbar.classList.remove("sticky-navbar-hidden");
+  //     }
+  //     lastScrollTop = scrollTop;
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   const Elements = (val) => {
     return (
       <div
@@ -54,6 +52,11 @@ function App() {
           <Route path="/services" element={Elements("Services")} />
           <Route path="/contact" element={Elements("Contact")} />
           <Route path="/login" element={Elements("Login")} />
+          <Route path="/projects" element={Elements("Construction Projects")} />
+          <Route path="/ev-charging" element={Elements("EV Charging Stations")} />
+          <Route path="/road-map" element={Elements(" Road Map")} />
+          <Route path="/travel-times" element={Elements("Travel Times")} />
+
         </Routes>
       </Suspense>
       <Footer />

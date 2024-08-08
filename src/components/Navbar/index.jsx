@@ -35,7 +35,7 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 to="/home"
-                className={`nav-link ${selectedLink === '/home' ? 'active' : ''}`}
+                className={`nav-link ${selectedLink === '/home'  ? 'active' : ''}`}
                 onClick={() => handleLinkClick('/home')}
               >
                 Home

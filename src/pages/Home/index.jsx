@@ -1,15 +1,18 @@
-import React from 'react'
-import "./home.css"
-import Whyus from './WhyUs'
-import Community from './Community'
-import PartnersSection from './Partners'
+import React, { lazy, Suspense } from "react";
+import "./home.css";
+const Whyus = lazy(() => import("./WhyUs"));
+const Community = lazy(() => import("./Community"));
+const PartnersSection = lazy(() => import("./Partners"));
 function Home() {
   return (
-    <div><Whyus/>
-    <Community/>
-    <PartnersSection/>
-    </div>
-  )
+    <>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Whyus />
+        <Community />
+        <PartnersSection />
+      </Suspense>
+    </>
+  );
 }
 
-export default Home
+export default Home;
