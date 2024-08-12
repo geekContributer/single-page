@@ -8,7 +8,6 @@ const Footer = () => {
     const [error, setError] = useState('');
   
     const validateEmail = (email) => {
-      // Basic email regex pattern for validation
       const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return pattern.test(email);
     };
@@ -21,7 +20,6 @@ const Footer = () => {
       e.preventDefault();
       if (validateEmail(email)) {
         setError('');
-        // Proceed with form submission (e.g., API call)
         console.log("Email is valid: ", email);
       } else {
         setError('Please enter a valid email address.');

@@ -7,25 +7,6 @@ import Navbar from "./components/Navbar";
 const Home = lazy(() => import('./pages/Home'));
 
 function App() {
-  // useEffect(() => {
-  //   let lastScrollTop = 0;
-  //   const navbar = document.querySelector(".navbar");
-
-  //   const handleScroll = () => {
-  //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //     if (scrollTop > lastScrollTop) {
-  //       navbar.classList.add("sticky-navbar-hidden");
-  //       navbar.classList.remove("sticky-navbar-visible");
-  //     } else {
-  //       navbar.classList.add("sticky-navbar-visible");
-  //       navbar.classList.remove("sticky-navbar-hidden");
-  //     }
-  //     lastScrollTop = scrollTop;
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
   const Elements = (val) => {
     return (
       <div

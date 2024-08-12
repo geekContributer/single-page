@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/Images/logo.svg';
-import login from '../../assets/Images/login.png'; // Import the PNG image
+import login from '../../assets/Images/login.png';
+
 
 import './navbar.css';
 
